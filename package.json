@@ -1,0 +1,20 @@
+{
+  "name": "vue-router-and-without-router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@webcomponents/custom-elements": "^1.0.0-alpha.3",
+    "clarity-icons": "^0.9.6",
+    "clarity-ui": "^0.9.6",
+    "mutationobserver-shim": "^0.3.2",
+    "requirejs": "^2.3.3",
+    "vue": "^2.3.3",
+    "vue-router": "^2.5.3"
+  }
+}

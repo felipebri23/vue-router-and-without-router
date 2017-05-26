@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS hotels</title>
+
+    <link rel="stylesheet" href="node_modules/clarity-icons/clarity-icons.min.css">
+    <script src="node_modules/mutationobserver-shim/dist/mutationobserver.min.js"></script>
+    <script src="node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>
+    <script src="node_modules/clarity-icons/clarity-icons.min.js"></script>
+    <link rel="stylesheet" href="node_modules/clarity-ui/clarity-ui.min.css">
+
+</head>
+<body>
+    <div class="main-container" id="app">
+        <header class="header header-2">
+            <div class="branding">
+                <a href="#" @click="currentChange('Home')"><span class="title">{{ title }}</span>
+            </div>
+            <div class="header-nav">
+                <a href="./index-router.html" class="active nav-link nav-text">Go to vuejs with router</a>
+            </div>
+        </header>
+        <nav class="subnav">
+            <ul class="nav">
+                <li class="nav-item" v-for="view in views">
+                    <a href="#" class="nav-link" :class="{ active: currentView.name === view.name}" 
+                            @click="currentChange(view.name)">{{ view.name }}</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content-container">
+            <div class="content-area">
+                <component :is="currentView.component"></component>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="scripts/home.js"></script>
+    <script src="scripts/habitacion.js"></script>
+    <script src="scripts/servicio.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

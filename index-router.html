@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS hotels</title>
+
+    <link rel="stylesheet" href="node_modules/clarity-icons/clarity-icons.min.css">
+    <script src="node_modules/mutationobserver-shim/dist/mutationobserver.min.js"></script>
+    <script src="node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>
+    <script src="node_modules/clarity-icons/clarity-icons.min.js"></script>
+    <link rel="stylesheet" href="node_modules/clarity-ui/clarity-ui.min.css">
+
+</head>
+
+<body>
+    <div class="main-container" id="app">
+        <header class="header header-2">
+            <div class="branding">
+                <router-link to='/'><span class="title">{{ title }}</span></router-link>
+            </div>
+            <div class="header-nav">
+                <a href="./index.html" class="active nav-link nav-text">Go to vuejs without router</a>
+            </div>
+        </header>
+        <nav class="subnav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <router-link to='/' class="nav-link" active-class="active" exact>Home</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to='Habitacion' class="nav-link" active-class="active" exact>Habitaciones</router-link>
+                </li>
+                <li class="nav-item">
+                    <router-link to='Servicio' class="nav-link" active-class="active" exact>Servicios</router-link>
+                </li>
+            </ul>
+        </nav>
+        <div class="content-container">
+            <div class="content-area">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/requirejs/require.js"></script>
+    <script src="scripts-router/app.js"></script>
+</body>
+
+</html>
