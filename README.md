@@ -1,1 +1,1 @@
-vue-router-and-without-router
+Aplicación test para el uso de vue sin router, y con router.
