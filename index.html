@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>VueJS hotels</title>
@@ -8,8 +9,10 @@
     <script src="node_modules/@webcomponents/custom-elements/custom-elements.min.js"></script>
     <script src="node_modules/clarity-icons/clarity-icons.min.js"></script>
     <link rel="stylesheet" href="node_modules/clarity-ui/clarity-ui.min.css">
+    <link rel="stylesheet" href="styles/main.css">
 
 </head>
+
 <body>
     <div class="main-container" id="app">
         <header class="header header-2">
@@ -23,14 +26,15 @@
         <nav class="subnav">
             <ul class="nav">
                 <li class="nav-item" v-for="view in views">
-                    <a href="#" class="nav-link" :class="{ active: currentView.name === view.name}" 
-                            @click="currentChange(view.name)">{{ view.name }}</a>
+                    <a href="#" class="nav-link" :class="{ active: currentView.name === view.name}" @click="currentChange(view.name)">{{ view.name }}</a>
                 </li>
             </ul>
         </nav>
         <div class="content-container">
             <div class="content-area">
-                <component :is="currentView.component"></component>
+                <transition name="slide-fade">
+                    <component :is="currentView.component"></component>
+                </transition>
             </div>
         </div>
     </div>
@@ -41,4 +45,5 @@
     <script src="scripts/servicio.js"></script>
     <script src="scripts/app.js"></script>
 </body>
+
 </html>
