@@ -1,4 +1,6 @@
 var Habitacion = {
+    mixins: [Mixin],
+    name: 'Habitacion',
     template: `
         <h1>{{ title }}</h1>
     `,

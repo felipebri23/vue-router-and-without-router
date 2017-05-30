@@ -1,4 +1,6 @@
 var Servicio = {
+    mixins: [Mixin],
+    name: 'Servicio',
     template: `
         <h1>{{ title }}</h1>
     `,

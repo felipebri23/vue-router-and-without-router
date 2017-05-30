@@ -1,4 +1,6 @@
 var app = new Vue({
+  mixins: [Mixin],
+  name: 'App',
   el: '#app',
   data: {
     title: 'Vuejs - Hoteles',
